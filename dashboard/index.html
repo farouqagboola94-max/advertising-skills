@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Business Health</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Business Health</h1>
+    <p class="subtitle">Finance and marketing, at a glance. <span class="badge">mock data</span></p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Finance <span class="period" id="finance-period"></span></h2>
+      <div class="cards" id="finance-cards"></div>
+      <p class="callout" id="finance-callout"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Marketing <span class="period" id="marketing-period"></span></h2>
+      <div class="cards" id="marketing-cards"></div>
+      <p class="callout" id="marketing-callout"></p>
+    </section>
+
+    <section class="panel" id="risks-panel">
+      <h2>What needs attention</h2>
+      <ol id="risks-list"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Running on mock data. To make it live, edit the three functions in <code>data.js</code> — see <code>README.md</code>.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

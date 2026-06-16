@@ -1,0 +1,98 @@
+:root {
+  --bg: #0f1115;
+  --panel: #171a21;
+  --border: #2a2e38;
+  --text: #e7e9ee;
+  --muted: #9aa1ad;
+  --good: #3ddc97;
+  --bad: #f55a5a;
+  --accent: #5b8cff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header { padding: 28px 32px 8px; }
+h1 { margin: 0; font-size: 1.7rem; }
+.subtitle { color: var(--muted); margin: 4px 0 0; }
+
+.badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.panel h2 { margin: 0 0 16px; font-size: 1.1rem; }
+.period { color: var(--muted); font-size: 0.8rem; font-weight: normal; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.card {
+  background: #1d212b;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.card .label { color: var(--muted); font-size: 0.75rem; }
+.card .value { font-size: 1.4rem; font-weight: 700; margin-top: 4px; }
+.card .delta { font-size: 0.8rem; margin-top: 2px; }
+.delta.up { color: var(--good); }
+.delta.down { color: var(--bad); }
+
+.callout {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  background: #1d212b;
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+#risks-list { margin: 0; padding-left: 20px; }
+#risks-list li { margin-bottom: 10px; line-height: 1.4; }
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 32px 32px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
