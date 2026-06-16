@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Finance & Marketing Monitor</title>
+<link rel="stylesheet" href="style.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+</head>
+<body>
+  <header>
+    <h1>Finance &amp; Marketing Monitor</h1>
+    <p class="subtitle">Live business health at a glance. <span id="data-mode-badge" class="badge">mock data</span></p>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>Finance</h2>
+      <div class="cards" id="finance-cards"></div>
+      <div class="chart-wrap"><canvas id="revenue-chart"></canvas></div>
+      <div class="table-wrap">
+        <h3>Overdue Receivables</h3>
+        <table id="ar-table">
+          <thead><tr><th>Customer</th><th>Amount</th><th>Days Overdue</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Marketing</h2>
+      <div class="cards" id="marketing-cards"></div>
+      <div class="chart-wrap"><canvas id="roas-chart"></canvas></div>
+      <div class="table-wrap">
+        <h3>Campaign Performance</h3>
+        <table id="campaign-table">
+          <thead><tr><th>Campaign</th><th>Spend</th><th>ROAS</th><th>Status</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="panel" id="risks-panel">
+      <h2>Top Risks</h2>
+      <ol id="risks-list"></ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Replace the mock fetch functions in <code>data.js</code> with real calls to QuickBooks, Supermetrics, Semrush, and Bitly to make this live. See <code>README.md</code>.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
