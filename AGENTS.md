@@ -4,7 +4,7 @@
 
 Skills are designed to be used in sequence, not isolation.
 
-### Standard Flow
+### Standard Flow (campaign build)
 
 1. avatar-extraction
 2. offer-extraction
@@ -16,6 +16,12 @@ Skills are designed to be used in sequence, not isolation.
 8. objection-crusher
 9. generic-language-killer
 
+### Monitoring Flow (ongoing health check)
+
+1. finance-monitor
+2. marketing-monitor
+3. finance-marketing-monitoring-orchestrator (runs both, cross-checks, ranks risks)
+
 ---
 
 ## Rules
@@ -24,9 +30,11 @@ Skills are designed to be used in sequence, not isolation.
 * Do not invent missing inputs
 * Maintain consistency across outputs
 * Do not write copy before strategy
+* Monitoring skills only report on data from connected sources — never fabricate figures
 
 ---
 
 ## Goal
 
-Produce conversion-focused marketing assets using structured thinking.
+Produce conversion-focused marketing assets using structured thinking, and give
+operators a reliable, recurring view of how the business is actually performing.
