@@ -49,6 +49,7 @@ A best-in-class skill library for AI agents built around:
 * Funnel architecture and conversion logic  
 * Creative testing and scaling  
 * Campaign diagnosis and optimisation  
+* Ongoing finance and marketing monitoring  
 
 Each skill is:
 
@@ -139,6 +140,9 @@ This produces:
 See:
 /examples/booked-call-campaign-ai-ads.md
 
+For a recurring health check across finance and marketing data, see:
+/examples/business-health-check.md
+
 ---
 
 ## Core Skill Categories
@@ -183,6 +187,15 @@ Execution and scale.
 
 ---
 
+### Monitoring
+
+Ongoing visibility into the business, not just campaign build-out.
+
+* finance-monitor — cash flow, P&L, AR/AP aging from connected accounting data
+* marketing-monitor — spend, ROAS, SEO, and link performance from connected marketing data
+
+---
+
 ### QA
 
 What makes the output actually good.
@@ -201,6 +214,7 @@ Pre-built multi-skill flows.
 * full-funnel-campaign-orchestrator  
 * booked-call-campaign-orchestrator  
 * campaign-diagnosis-orchestrator  
+* finance-marketing-monitoring-orchestrator  
 
 ---
 
