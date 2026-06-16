@@ -1,7 +1,8 @@
-# Finance & Marketing Dashboard
+# Business Health Dashboard
 
-A static dashboard showing finance and marketing health in one view: revenue,
-margin, cash, overdue receivables, ad spend, ROAS, and campaign-level risk.
+One page, two sections: Finance and Marketing. Each shows four key numbers
+plus a one-line callout on what matters most right now. A "What needs
+attention" list sits at the bottom with the top risks across both.
 
 Currently runs on **mock data** (see `data.js`) so it can be deployed and
 viewed immediately.
@@ -16,8 +17,8 @@ npx serve dashboard
 
 ## Deploy
 
-This is a static site (no build step) — drag the `dashboard/` folder into
-Netlify, or run `vercel deploy` from inside it.
+Static site, no build step — drag the `dashboard/` folder into Netlify, or
+run `vercel deploy` from inside it.
 
 ## Make it live
 
@@ -27,9 +28,8 @@ sources, keeping the same return shape:
 - `fetchFinanceSummary()` — pull from QuickBooks (P&L, cash flow, AR aging)
 - `fetchMarketingSummary()` — pull from Supermetrics (spend/ROAS) and Semrush (organic traffic)
 - `fetchRisks()` — derive from the same data, or generate via the
-  `finance-marketing-monitoring-orchestrator` skill in the
-  `advertising-skills` repo
+  `finance-marketing-monitoring-orchestrator` skill in this repo
 
-Since these APIs require secret credentials, the calls should go through a
-small backend/serverless function (not directly from the browser) so keys
-aren't exposed client-side.
+Since these APIs require secret credentials, route the calls through a
+small backend/serverless function rather than calling them directly from
+the browser, so keys aren't exposed client-side.
